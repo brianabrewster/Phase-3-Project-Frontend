@@ -10,6 +10,10 @@ import Appointments from "./Appointments";
 function App() {
   const [dogs, setDogs] = useState([]);
 
+  function onAddDog(newDog) {
+    setDogs([...dogs, newDog]);
+  }
+
   useEffect(() => {
     fetch("http://localhost:9292/dogs")
       .then((r) => r.json())
@@ -31,7 +35,7 @@ function App() {
             <Walkers />
           </Route>
           <Route path="/application">
-            <Application />
+            <Application onAddDog={onAddDog} />
           </Route>
           <Route path="/appointments">
             <Appointments />
