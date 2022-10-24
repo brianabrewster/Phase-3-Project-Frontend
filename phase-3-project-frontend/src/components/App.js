@@ -1,8 +1,21 @@
-import "./App.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
+import NavBar from "./NavBar";
+import HomePage from "./HomePage";
+import Dogs from "./Dogs";
+import Walkers from "./Walkers";
+import Application from "./Application";
+import Appointments from "./Appointments";
 
 function App() {
+  const [dogs, setDogs] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:9292/dogs")
+      .then((r) => r.json())
+      .then((dogs) => setDogs(dogs));
+  }, []);
+
   return (
     <div className="App">
       <header>
@@ -12,7 +25,7 @@ function App() {
             <HomePage />
           </Route>
           <Route path="/dogs">
-            <Dogs />
+            <Dogs dogs={dogs} />
           </Route>
           <Route path="/walkers">
             <Walkers />

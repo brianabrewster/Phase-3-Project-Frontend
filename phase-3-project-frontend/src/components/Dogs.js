@@ -1,9 +1,9 @@
-function Dogs() {
-    return(
-        <div>
+import DogCard from "./DogCard";
 
-        </div>
-    )
+function Dogs({ dogs }) {
+  return dogs.map((dog) => {
+    <DogCard key={dog.id} dog={dog} />;
+  });
 }
 
 export default Dogs;
