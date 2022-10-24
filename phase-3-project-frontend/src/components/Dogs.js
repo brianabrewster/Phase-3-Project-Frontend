@@ -1,9 +1,15 @@
 import DogCard from "./DogCard";
 
 function Dogs({ dogs }) {
-  return dogs.map((dog) => {
-    <DogCard key={dog.id} dog={dog} />;
+  const renderDogs = dogs.map((dog) => {
+    return <DogCard key={dog.id} dog={dog}/>;
   });
+
+  return(
+    <div>
+        {renderDogs}
+    </div>
+)
 }
 
 export default Dogs;
