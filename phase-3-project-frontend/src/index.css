@@ -26,7 +26,7 @@ code {
 }
 
 nav {
-  background-color: cornsilk;
+  background-color: rgb(110, 74, 7);
   border-radius: 0.5rem;
   margin-bottom: 30px;
   padding: 2px;
@@ -38,19 +38,19 @@ nav a {
   margin: 1rem;
   text-decoration: none;
   font-size: 1.2em;
-  color: rgb(83, 59, 17);
+  color: rgb(227, 223, 217);
   border-bottom: 2px solid rgb(105, 73, 35);
   transition: 0.1s;
 }
 
 nav a:hover,
 nav a:active {
-  color: #6a582c;
-  border-bottom: 2px solid #6a582c;
+  color: #d5aa7f;
+  border-bottom: 2px solid #d5aa7f;
 }
 
 nav a.active {
-  background-color: #da9a5b;
+  background-color: #d5aa7f;
   color: white;
 }
 .dogsContainer {
@@ -60,10 +60,16 @@ nav a.active {
 }
 
 .dogCard {
+  background-color: rgb(159, 118, 29);
+  border-radius: 3rem;
+  box-shadow: 5pt 6px rgba(74, 55, 12, 0.8);
+  width: 33%;
+  overflow: hidden;
+  margin: 2.5rem;
   display: flex;
   flex-direction: column;
   min-width: 400px;
-  padding: 50px;
+  padding: 10px;
   justify-content: center;
   align-items: center;
 }
@@ -75,7 +81,8 @@ nav a.active {
 }
 
 .dogImg {
-  max-width: 300px;
+  border-radius: 2rem;
+  max-width: 250px;
   max-height: 300px;
   min-width: 450px;
   max-height: 300px;
@@ -100,16 +107,53 @@ nav a.active {
 .delEditContainer {
   display: flex;
   justify-content: right;
+  margin: 20px;
+}
+
+.card {
+  background-color: rgb(159, 118, 29);
+  border-radius: 4rem;
+  box-shadow: 5pt 6px rgba(74, 55, 12, 0.8);
+  display: flex;
+  width: 45%;
+  overflow: hidden;
+  padding: 1rem;
+  margin: 2rem;
+}
+
+.walker-img {
+  border-radius: 1rem;
+}
+
+.appt-card {
+  --background: #c7a285;
+  --text: black;
+  position: relative;
+  height: 8rem;
+  width: 50%;
+  box-shadow: 2pt 8px rgba(71, 51, 4, 0.05);
+}
+
+.form {
+  position: relative;
+  height: 8rem;
+  width: 50%;
 }
 
 .applicationForm {
   display: flex;
   flex-direction: column;
-  max-width: 50%;
   justify-content: center;
-  padding-left: 25%;
-  padding-right: 25%;
-  border: #6a582c;
+  max-width: 50%;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: rgb(159, 118, 29);
+  border-radius: 3rem;
+  box-shadow: 5pt 6px rgba(74, 55, 12, 0.8);
+  width: 33%;
+  overflow: hidden;
+  margin-left: 31%;
+  margin-right: 25%;
 }
 
 .applicationTitle {

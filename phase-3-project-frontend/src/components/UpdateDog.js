@@ -30,21 +30,25 @@ const UpdateDog = ({ dog, onUpdateDog, handleCancel }) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
+        <label>Name</label>
         <input
           value={name}
           type="text"
           onChange={(e) => setName(e.target.value)}
         ></input>
+        <label>Owner</label>
         <input
           value={owner}
           type="text"
           onChange={(e) => setOwner(e.target.value)}
         ></input>
+        <label>Breed</label>
         <input
           value={breed}
           type="text"
           onChange={(e) => setBreed(e.target.value)}
         ></input>
+        <label>Temperament</label>
         <input
           value={temperament}
           type="text"
