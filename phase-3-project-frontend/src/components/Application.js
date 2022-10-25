@@ -35,38 +35,45 @@ function Application({ onAddDog }) {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div class="applicationFormContainer">
+      <h1 class="applicationTitle">Register a Pet</h1>
+      <form class="applicationForm" onSubmit={handleSubmit}>
+        <label>Name</label>
         <input
           value={name}
           type="text"
           placeholder="Name..."
           onChange={(e) => setName(e.target.value)}
         ></input>
+        <label>Owner</label>
         <input
           value={owner}
           type="text"
           placeholder="Owner..."
           onChange={(e) => setOwner(e.target.value)}
         ></input>
+        <label>Breed</label>
         <input
           value={breed}
           type="text"
           placeholder="Breed..."
           onChange={(e) => setBreed(e.target.value)}
         ></input>
+        <label>Temperament</label>
         <input
           value={temperament}
           type="text"
           placeholder="Temperament..."
           onChange={(e) => setTemperament(e.target.value)}
         ></input>
+        <label>Age</label>
         <input
           value={age}
           type="integer"
           placeholder="Age... (Numbers Only)"
           onChange={(e) => setAge(e.target.value)}
         ></input>
+        <label>Picture</label>
         <input
           value={image}
           type="text"
