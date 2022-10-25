@@ -1,6 +1,6 @@
 import React from "react";
 
-function AppointmentCard({date, dog_id, dog, walker}) {
+function AppointmentCard({date, dog, walker}) {
     return (
         <div>
             <p>Walker: {walker?.name}</p>
