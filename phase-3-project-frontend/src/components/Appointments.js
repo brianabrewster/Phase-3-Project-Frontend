@@ -39,7 +39,7 @@ function Appointments({ dogs, walkers }) {
             body: JSON.stringify(newAppointment)
         })
         .then((res) => res.json())
-        .then((data) => console.log(data[0]))
+        .then((data) => addNewAppointment(data[0]))
 
         setDate("")
     }
