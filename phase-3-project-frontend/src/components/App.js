@@ -14,6 +14,18 @@ function App() {
     setDogs([...dogs, newDog]);
   }
 
+  function onUpdateDog(updatedDog) {
+    setDogs((dogs) => {
+      return dogs.map((dog) => {
+        return dog.id === updatedDog.id ? updatedDog : dog;
+      });
+    });
+  }
+
+  function onDeleteDog(dogId) {
+    setDogs((dogs) => dogs.filter((dog) => dog.id !== dogId));
+  }
+
   useEffect(() => {
     fetch("http://localhost:9292/dogs")
       .then((r) => r.json())
@@ -29,7 +41,11 @@ function App() {
             <HomePage />
           </Route>
           <Route path="/dogs">
-            <Dogs dogs={dogs} />
+            <Dogs
+              dogs={dogs}
+              onUpdateDog={onUpdateDog}
+              onDeleteDog={onDeleteDog}
+            />
           </Route>
           <Route path="/walkers">
             <Walkers />
