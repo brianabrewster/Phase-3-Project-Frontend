@@ -49,3 +49,12 @@
   max-width: 300px;
   max-height: 200px;
 }
+
+.dogCard {
+  display: flex;
+}
+
+.dogImg {
+  max-width: 300px;
+  max-height: 200px;
+}
