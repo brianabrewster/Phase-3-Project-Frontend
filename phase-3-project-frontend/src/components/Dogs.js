@@ -1,15 +1,18 @@
 import DogCard from "./DogCard";
 
-function Dogs({ dogs }) {
+function Dogs({ dogs, onUpdateDog, onDeleteDog }) {
   const renderDogs = dogs.map((dog) => {
-    return <DogCard key={dog.id} dog={dog}/>;
+    return (
+      <DogCard
+        key={dog.id}
+        dog={dog}
+        onUpdateDog={onUpdateDog}
+        onDeleteDog={onDeleteDog}
+      />
+    );
   });
 
-  return(
-    <div>
-        {renderDogs}
-    </div>
-)
+  return <div>{renderDogs}</div>;
 }
 
 export default Dogs;
