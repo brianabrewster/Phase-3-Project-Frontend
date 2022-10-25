@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AppointmentCard from "./AppointmentCard";
 
-function Appointments() {
+function Appointments({ dogs, walkers }) {
 
     const [appointments, setAppointments] = useState([])
 
@@ -26,11 +26,12 @@ function Appointments() {
     function handleSubmit(e) {
         e.preventDefault();
         const newAppointment = {
-            walkerId: walkerId,
-            dogId: dogId,
+            walker_id: parseInt(walkerId),
+            dog_id: parseInt(dogId),
             date: date
         }
-        fetch('http://localhost:4000/appointments', {
+        console.log(newAppointment)
+        fetch('http://localhost:9292/appointments', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
@@ -38,13 +39,10 @@ function Appointments() {
             body: JSON.stringify(newAppointment)
         })
         .then((res) => res.json())
-        .then(() => addNewAppointment(newAppointment))
+        .then((data) => console.log(data[0]))
 
-        setWalkerId(0)
-        setDogId(0)
         setDate("")
     }
-
 
     return(
 
@@ -55,21 +53,16 @@ function Appointments() {
            <h2>Make An Appointment</h2>
            <form onSubmit={handleSubmit}>
             <label>Choose a Walker</label>
-            <select>
-               <option value="Steve">Steve</option>
-               <option value="Rachel">Rachel</option>
-               <option value="Caroline">Caroline</option>
+            <select onChange={(e) => setWalkerId(e.target.value)}>
+            {walkers.map((walker) => {
+                return <option key={walker.id} value={walker.id}>{walker.name}</option>
+             })}
             </select>
             <label>Choose a Dog</label>
-            <select>
-               <option value="Rex">Rex</option>
-               <option value="Pugsly">Pugsly</option>
-               <option value="Lassie">Lassie</option>
-               <option value="Fido">Fido</option>
-               <option value="Skip">Skip</option>
-               <option value="Lady">Lady</option>
-               <option value="Gidget">Gidget</option>
-               <option value="Chase">Chase</option>
+            <select onChange={(e) => setDogId(e.target.value)}>
+             {dogs.map((dog) => {
+                return <option key={dog.id} value={dog.id}>{dog.name}</option>
+             })}
             </select>
             <input value={date} onChange={(e) => setDate(e.target.value)} type="text" name="date" placeholder="Date" />
                <button id="submit_button" type="submit">Create Appointment</button>
