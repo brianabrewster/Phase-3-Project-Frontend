@@ -26,7 +26,7 @@ code {
 }
 
 nav {
-  background-color: cornsilk;
+  background-color: rgb(110, 74, 7);
   border-radius: 0.5rem;
   margin-bottom: 30px;
   padding: 2px;
@@ -38,19 +38,19 @@ nav a {
   margin: 1rem;
   text-decoration: none;
   font-size: 1.2em;
-  color: rgb(83, 59, 17);
+  color: rgb(227, 223, 217);
   border-bottom: 2px solid rgb(105, 73, 35);
   transition: 0.1s;
 }
 
 nav a:hover,
 nav a:active {
-  color: #6a582c;
-  border-bottom: 2px solid #6a582c;
+  color: #d5aa7f;
+  border-bottom: 2px solid #d5aa7f;
 }
 
 nav a.active {
-  background-color: #da9a5b;
+  background-color: #d5aa7f;
   color: white;
 }
 .dogsContainer {
