@@ -62,7 +62,7 @@ const UpdateDog = ({ dog, onUpdateDog, handleCancel }) => {
         ></input>
         <button type="submit">Update Dog</button>
       </form>
-      <button onClick={handleCancel}>Cancel</button>
+      <button onClick={() => handleCancel()}>Cancel</button>
     </div>
   );
 };

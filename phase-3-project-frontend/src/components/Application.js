@@ -25,6 +25,13 @@ function Application({ onAddDog }) {
     })
       .then((r) => r.json())
       .then((data) => onAddDog(data));
+
+    setName("");
+    setImage("");
+    setOwner("");
+    setBreed("");
+    setTemperament("");
+    setAge(0);
   }
 
   return (
