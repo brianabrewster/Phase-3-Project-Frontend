@@ -3,7 +3,7 @@ function WalkerCard({ name, years_of_experience, pace, image }) {
         <li className="card">
          <div className="card__content">
              <h1 className="card__title">{name}</h1>
-             <img src={image} alt="walker_image"></img>
+             <img className="walker-img" src={image} alt="walker_image"></img>
              <p>Years of Experience: {years_of_experience}</p>
              <p>Pace: {pace}</p>
          </div>
