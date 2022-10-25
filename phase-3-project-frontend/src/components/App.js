@@ -10,14 +10,13 @@ import Appointments from "./Appointments";
 function App() {
   const [dogs, setDogs] = useState([]);
 
-  const [walkers, setWalkers] = useState([])
-
+  const [walkers, setWalkers] = useState([]);
 
   useEffect(() => {
-      fetch('http://localhost:9292/walkers')
+    fetch("http://localhost:9292/walkers")
       .then((res) => res.json())
-      .then((data) => setWalkers(data))
-  }, [])
+      .then((data) => setWalkers(data));
+  }, []);
 
   function onAddDog(newDog) {
     setDogs([...dogs, newDog]);
@@ -57,13 +56,13 @@ function App() {
             />
           </Route>
           <Route path="/walkers">
-            <Walkers walkers={walkers}/>
+            <Walkers walkers={walkers} />
           </Route>
           <Route path="/application">
             <Application onAddDog={onAddDog} />
           </Route>
           <Route path="/appointments">
-            <Appointments walkers={walkers} dogs={dogs}/>
+            <Appointments walkers={walkers} dogs={dogs} />
           </Route>
         </Switch>
       </header>

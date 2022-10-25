@@ -3,8 +3,9 @@ import AppointmentCard from "./AppointmentCard";
 
 function Appointments({ dogs, walkers }) {
   const [appointments, setAppointments] = useState([]);
-  const [walkerId, setWalkerId] = useState(0);
-  const [dogId, setDogId] = useState(0);
+
+  const [walkerId, setWalkerId] = useState(1);
+  const [dogId, setDogId] = useState(1);
   const [date, setDate] = useState("");
 
   useEffect(() => {

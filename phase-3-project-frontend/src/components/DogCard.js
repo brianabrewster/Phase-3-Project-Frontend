@@ -16,19 +16,28 @@ const DogCard = ({ dog, onUpdateDog, onDeleteDog }) => {
   }
 
   return (
-    <div>
-      <h1>{dog.name}</h1>
-      <img src={dog.image} alt={dog.name} />
+    <div class="dogCard">
+      <div class="nameImg">
+        <h1 class="dogName">{dog.name}</h1>
+        <img class="dogImg" src={dog.image} alt={dog.name} />
+      </div>
       {isMainInfo ? (
-        <div>
+        <div class="dogInfo">
           <p>Owner: {dog.owner}</p>
           <p>Breed: {dog.breed}</p>
           <p>Temperament: {dog.temperament}</p>
           <p>Age: {dog.age}</p>
-          <button onClick={() => setIsMainInfo(!isMainInfo)}>
-            Update Info
-          </button>
-          <button onClick={handleDeleteClick}>Delete</button>
+          <div class="delEditContainer">
+            <button
+              class="delEditBtn"
+              onClick={() => setIsMainInfo(!isMainInfo)}
+            >
+              ✎
+            </button>
+            <button class="delEditBtn" onClick={handleDeleteClick}>
+              X
+            </button>
+          </div>
         </div>
       ) : (
         <UpdateDog

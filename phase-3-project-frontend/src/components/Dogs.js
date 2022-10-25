@@ -12,7 +12,7 @@ function Dogs({ dogs, onUpdateDog, onDeleteDog }) {
     );
   });
 
-  return <div>{renderDogs}</div>;
+  return <div class="dogsContainer">{renderDogs}</div>;
 }
 
 export default Dogs;
