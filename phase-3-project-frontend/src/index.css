@@ -39,14 +39,14 @@ nav a {
   text-decoration: none;
   font-size: 1.2em;
   color: rgb(83, 59, 17);
-  border-bottom: 2px solid rgb(56, 38, 16);
+  border-bottom: 2px solid rgb(105, 73, 35);
   transition: 0.1s;
 }
 
 nav a:hover,
 nav a:active {
-  color: #6f7c7f;
-  border-bottom: 2px solid #6f7c7f;
+  color: #6a582c;
+  border-bottom: 2px solid #6a582c;
 }
 
 nav a.active {
