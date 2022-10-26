@@ -143,7 +143,7 @@ nav a.active {
   border: none;
   background-color: #d5aa7f;
   cursor: pointer;
-  margin-left: 170px;
+  margin-left: 30%;
 }
 
 .formInput {
@@ -250,7 +250,7 @@ nav a.active {
 .appLabel {
   font-size: 20px;
   font-weight: 700;
-  margin-left: 120px;
+  margin-left: 22%;
 }
 
 .updateLabel {
