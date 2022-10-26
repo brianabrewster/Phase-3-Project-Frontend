@@ -110,11 +110,15 @@ nav a.active {
 
 .dogName {
   text-align: center;
+  font-size: 50px;
+  font-weight: 800;
 }
 
 .dogInfo {
   width: 100%;
   height: fit-content;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .delEditBtn {
@@ -189,6 +193,25 @@ nav a.active {
   flex-direction: column;
 }
 
+#updateSubmit {
+  width: 200px;
+  padding: 7px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  background-color: #d5aa7f;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+#cancelBtn {
+  width: 200px;
+  height: 35x;
+  padding: 7px;
+  margin-left: 50px;
+  font-weight: 600;
+}
+
 .applicationForm {
   display: flex;
   flex-direction: column;
@@ -210,6 +233,11 @@ nav a.active {
 .appLabel {
   font-size: 20px;
   font-weight: 700;
+}
+
+.updateLabel {
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .applicationForm button {

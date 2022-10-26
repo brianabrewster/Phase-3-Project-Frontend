@@ -30,45 +30,56 @@ const UpdateDog = ({ dog, onUpdateDog, handleCancel }) => {
   return (
     <div>
       <form onSubmit={handleSubmit} className="updateForm">
-        <label>Name</label>
+        <label className="updateLabel">Name</label>
         <input
+          className="formInput"
           value={name}
           type="text"
           onChange={(e) => setName(e.target.value)}
         ></input>
-        <label>Owner</label>
+        <label className="updateLabel">Owner</label>
         <input
+          className="formInput"
           value={owner}
           type="text"
           onChange={(e) => setOwner(e.target.value)}
         ></input>
-        <label>Breed</label>
+        <label className="updateLabel">Breed</label>
         <input
+          className="formInput"
           value={breed}
           type="text"
           onChange={(e) => setBreed(e.target.value)}
         ></input>
-        <label>Temperament</label>
+        <label className="updateLabel">Temperament</label>
         <input
+          className="formInput"
           value={temperament}
           type="text"
           onChange={(e) => setTemperament(e.target.value)}
         ></input>
-        <label>Age</label>
+        <label className="updateLabel">Age</label>
         <input
+          className="formInput"
           value={age}
           type="integer"
           onChange={(e) => setAge(e.target.value)}
         ></input>
-        <label>Image</label>
+        <label className="updateLabel">Image</label>
         <input
+          className="formInput"
           value={image}
           type="text"
           onChange={(e) => setImage(e.target.value)}
         ></input>
-        <button type="submit">Update Dog</button>
+        <br />
+        <button id="updateSubmit" type="submit">
+          Update Dog
+        </button>
       </form>
-      <button onClick={() => handleCancel()}>Cancel</button>
+      <button id="cancelBtn" onClick={() => handleCancel()}>
+        Cancel
+      </button>
     </div>
   );
 };
