@@ -125,6 +125,8 @@ nav a.active {
 .delEditBtn {
   min-width: 30px;
   min-height: 30px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .delEditContainer {
@@ -162,6 +164,7 @@ nav a.active {
 
 .walker-img {
   border-radius: 1rem;
+  max-width: 500px;
 }
 
 .appt-card {
@@ -263,4 +266,17 @@ nav a.active {
   text-align: center;
   margin-left: 100px;
   margin-top: 75px;
+  margin-right: 50px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.card__content {
+  display: flex;
+  flex-flow: column;
+}
+
+.walkerInfo {
+  display: flex;
+  flex-wrap: nowrap;
 }
