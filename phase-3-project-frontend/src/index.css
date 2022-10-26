@@ -141,7 +141,7 @@ nav a.active {
   border: none;
   background-color: #d5aa7f;
   cursor: pointer;
-  margin-left: 50px;
+  margin-left: 170px;
 }
 
 .formInput {
@@ -232,13 +232,14 @@ nav a.active {
 }
 
 .applicationForm input {
-  margin-left: 30px;
   margin-top: 5px;
+  margin-left: 120px;
 }
 
 .appLabel {
   font-size: 20px;
   font-weight: 700;
+  margin-left: 120px;
 }
 
 .updateLabel {
@@ -256,15 +257,6 @@ nav a.active {
 
 .applicationFormContainer {
   justify-content: center;
-}
-
-.card__content {
-  display: flex;
-  flex-direction: column;
-}
-
-.walkerInfo {
-  display: flex;
 }
 
 .walkerText {
