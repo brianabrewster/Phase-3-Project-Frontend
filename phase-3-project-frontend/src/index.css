@@ -1,5 +1,6 @@
 html {
   background-color: rgb(227, 201, 167);
+  background-image: url("https://static.wixstatic.com/media/a5b467_c1ca6f0673d341c486ff8639cd098826~mv2_d_1752_1378_s_2.jpg/v1/fill/w_640,h_1296,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a5b467_c1ca6f0673d341c486ff8639cd098826~mv2_d_1752_1378_s_2.jpg");
 }
 
 .home {
@@ -217,9 +218,7 @@ nav a.active {
   flex-direction: column;
   justify-content: center;
   max-width: 50%;
-  padding-left: 140px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 30px;
   background-color: rgb(159, 118, 29);
   border-radius: 3rem;
   box-shadow: 5pt 6px rgba(74, 55, 12, 0.8);
@@ -227,7 +226,14 @@ nav a.active {
   overflow: hidden;
   margin-left: 33%;
   margin-right: 25%;
+  margin-bottom: 50px;
+  margin-top: 30px;
   box-sizing: border-box;
+}
+
+.applicationForm input {
+  margin-left: 30px;
+  margin-top: 5px;
 }
 
 .appLabel {
