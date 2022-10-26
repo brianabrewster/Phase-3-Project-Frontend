@@ -49,6 +49,7 @@ const DogCard = ({ dog, onUpdateDog, onDeleteDog }) => {
           dog={dog}
           onUpdateDog={onUpdateDog}
           handleCancel={handleCancel}
+          setIsMainInfo={setIsMainInfo}
         />
       )}
     </div>
