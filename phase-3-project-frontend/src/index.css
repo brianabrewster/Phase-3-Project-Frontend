@@ -128,6 +128,16 @@ nav a.active {
   margin: 20px;
 }
 
+#appSubmit {
+  width: 200px;
+  padding: 7px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  background-color: #d5aa7f;
+  cursor: pointer;
+}
+
 .card {
   background-color: rgb(159, 118, 29);
   border-radius: 4rem;
@@ -177,8 +187,9 @@ nav a.active {
   box-shadow: 5pt 6px rgba(74, 55, 12, 0.8);
   width: 33%;
   overflow: hidden;
-  margin-left: 31%;
+  margin-left: 33%;
   margin-right: 25%;
+  box-sizing: border-box;
 }
 
 .applicationTitle {
@@ -187,4 +198,19 @@ nav a.active {
 
 .applicationFormContainer {
   justify-content: center;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.walkerInfo {
+  display: flex;
+}
+
+.walkerText {
+  text-align: center;
+  margin-left: 100px;
+  margin-top: 75px;
 }

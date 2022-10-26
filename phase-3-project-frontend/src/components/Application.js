@@ -85,7 +85,9 @@ function Application({ onAddDog }) {
           placeholder="Image URL..."
           onChange={(e) => setImage(e.target.value)}
         ></input>
-        <button type="submit">Register Dog</button>
+        <button id="appSubmit" type="submit">
+          Register Dog
+        </button>
       </form>
     </div>
   );
