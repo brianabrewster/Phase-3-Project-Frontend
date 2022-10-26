@@ -14,8 +14,20 @@ function Appointments({ dogs, walkers }) {
       .then((data) => setAppointments(data));
   }, []);
 
+  function onDeleteAppointment(appointmentId) {
+    setAppointments((appointments) =>
+      appointments.filter((appointment) => appointment.id !== appointmentId)
+    );
+  }
+
   const renderAppointments = appointments.map((appointment) => {
-    return <AppointmentCard {...appointment} key={appointment.id} />;
+    return (
+      <AppointmentCard
+        {...appointment}
+        key={appointment.id}
+        onDeleteAppointment={onDeleteAppointment}
+      />
+    );
   });
 
   function addNewAppointment(newAppointment) {
@@ -45,7 +57,6 @@ function Appointments({ dogs, walkers }) {
 
   return (
     <div>
-
       <div className="form">
         <h2>Make An Appointment</h2>
         <form onSubmit={handleSubmit}>
@@ -81,9 +92,7 @@ function Appointments({ dogs, walkers }) {
           </button>
         </form>
       </div>
-      <div className="appt-list">
-      {renderAppointments}
-      </div>
+      <div className="appt-list">{renderAppointments}</div>
     </div>
   );
 }
