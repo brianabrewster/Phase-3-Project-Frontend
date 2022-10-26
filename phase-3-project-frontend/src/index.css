@@ -233,14 +233,13 @@ nav a.active {
   border: none;
   background-color: #d5aa7f;
   cursor: pointer;
-  margin-left: 50px;
 }
 
 #cancelBtn {
   width: 200px;
   height: 35x;
   padding: 7px;
-  margin-left: 50px;
+  margin-left: none;
   font-weight: 600;
 }
 
