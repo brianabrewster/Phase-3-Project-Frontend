@@ -156,10 +156,11 @@ nav a.active {
   border-radius: 4rem;
   box-shadow: 5pt 6px rgba(74, 55, 12, 0.8);
   display: flex;
-  width: 45%;
+  width: 60%;
   overflow: hidden;
-  padding: 1rem;
+  padding: 2%;
   margin: 2rem;
+  min-width: 20%;
 }
 
 .walker-img {
@@ -168,28 +169,36 @@ nav a.active {
 }
 
 .appt-card {
+  border-style: inset;
   text-align: center;
-  --background: #c7a285;
+  font-weight: 500;
   --text: black;
   position: relative;
   height: 8rem;
-  width: 50%;
-  box-shadow: 2pt 8px rgba(71, 51, 4, 0.05);
+  width: 45%;
+  box-shadow: 2pt 8px rgba(93, 66, 3, 0.05);
+  padding-bottom: 2%;
+  margin-left: 4%;
 }
 
 .appt-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 1rem;
+  padding: 3rem;
 }
 
 .form {
+  border-style: solid;
   margin-left: 25%;
   text-align: center;
   position: relative;
   height: 8rem;
   width: 50%;
+}
+
+.form label {
+  margin-left: 10px;
 }
 
 .updateForm {
@@ -236,13 +245,13 @@ nav a.active {
 
 .applicationForm input {
   margin-top: 5px;
-  margin-left: 22%;
+  margin-left: 15%;
 }
 
 .appLabel {
   font-size: 20px;
   font-weight: 700;
-  margin-left: 22%;
+  margin-left: 15%;
 }
 
 .updateLabel {
@@ -263,17 +272,20 @@ nav a.active {
 }
 
 .walkerText {
-  text-align: center;
-  margin-left: 100px;
+  min-width: 30%;
+  margin-left: 10%;
   margin-top: 75px;
-  margin-right: 50px;
+  margin-right: 40%;
   font-size: 25px;
   font-weight: 700;
+  flex-wrap: nowrap;
 }
 
 .card__content {
   display: flex;
   flex-flow: column;
+  padding: 3%;
+  margin-right: 20%;
 }
 
 .walkerInfo {
