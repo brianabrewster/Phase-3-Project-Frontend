@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 function Application({ onAddDog }) {
   const [name, setName] = useState("");
@@ -6,7 +7,9 @@ function Application({ onAddDog }) {
   const [owner, setOwner] = useState("");
   const [breed, setBreed] = useState("");
   const [temperament, setTemperament] = useState("");
-  const [age, setAge] = useState(0);
+  const [age, setAge] = useState();
+
+  let history = useHistory();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -26,12 +29,14 @@ function Application({ onAddDog }) {
       .then((r) => r.json())
       .then((data) => onAddDog(data));
 
-    setName("");
-    setImage("");
-    setOwner("");
-    setBreed("");
-    setTemperament("");
-    setAge(0);
+    history.push("/dogs");
+
+    // setName("");
+    // setImage("");
+    // setOwner("");
+    // setBreed("");
+    // setTemperament("");
+    // setAge(0);
   }
 
   return (

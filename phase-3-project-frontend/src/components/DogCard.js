@@ -29,12 +29,17 @@ const DogCard = ({ dog, onUpdateDog, onDeleteDog }) => {
           <p>Age: {dog.age}</p>
           <div class="delEditContainer">
             <button
+              title="edit"
               class="delEditBtn"
               onClick={() => setIsMainInfo(!isMainInfo)}
             >
               ✎
             </button>
-            <button class="delEditBtn" onClick={handleDeleteClick}>
+            <button
+              title="delete"
+              class="delEditBtn"
+              onClick={handleDeleteClick}
+            >
               X
             </button>
           </div>

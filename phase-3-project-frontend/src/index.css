@@ -8,7 +8,25 @@ html {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  padding: 20px;
+  padding: 50px;
+}
+
+.header {
+  font-size: 50px;
+  margin-top: 5px;
+}
+
+.header-img {
+  padding: 1.5rem;
+  height: 200px;
+}
+
+.about {
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 200px;
+  margin-right: 200px;
+  font-size: 20px;
 }
 
 body {
@@ -126,6 +144,7 @@ nav a.active {
 }
 
 .appt-card {
+  text-align: center;
   --background: #c7a285;
   --text: black;
   position: relative;
@@ -135,9 +154,15 @@ nav a.active {
 }
 
 .form {
+  text-align: center;
   position: relative;
   height: 8rem;
   width: 50%;
+}
+
+.updateForm {
+  display: flex;
+  flex-direction: column;
 }
 
 .applicationForm {
