@@ -60,7 +60,7 @@ function Appointments({ dogs, walkers }) {
       <div className="form">
         <h2>Make An Appointment</h2>
         <form onSubmit={handleSubmit}>
-          <label>Choose a Walker</label>
+          <label className="updateLabel">Choose a Walker</label>
           <select onChange={(e) => setWalkerId(e.target.value)}>
             {walkers.map((walker) => {
               return (
@@ -70,7 +70,7 @@ function Appointments({ dogs, walkers }) {
               );
             })}
           </select>
-          <label>Choose a Dog</label>
+          <label className="updateLabel">Choose a Dog</label>
           <select onChange={(e) => setDogId(e.target.value)}>
             {dogs.map((dog) => {
               return (

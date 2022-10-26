@@ -9,10 +9,12 @@ function AppointmentCard({ date, dog, walker, id, onDeleteAppointment }) {
   }
   return (
     <div className="appt-card">
-      <p>Walker: {walker?.name}</p>
-      <p>Dog: {dog?.name}</p>
-      <p>Date: {date}</p>
-      <button onClick={handleDeleteClick}>X</button>
+      <p className="appt-element">Walker: {walker?.name}</p>
+      <p className="appt-element">Dog: {dog?.name}</p>
+      <p className="appt-element">Date: {date}</p>
+      <button className="appt-delete" onClick={handleDeleteClick}>
+        Cancel
+      </button>
     </div>
   );
 }

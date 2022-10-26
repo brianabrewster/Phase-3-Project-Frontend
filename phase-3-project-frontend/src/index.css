@@ -169,6 +169,7 @@ nav a.active {
 }
 
 .appt-card {
+  display: flex;
   border-style: inset;
   text-align: center;
   font-weight: 500;
@@ -179,6 +180,21 @@ nav a.active {
   box-shadow: 2pt 8px rgba(93, 66, 3, 0.05);
   padding-bottom: 2%;
   margin-left: 4%;
+}
+
+.appt-element {
+  min-width: 30%;
+  text-align: center;
+  padding-top: 6%;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.appt-delete {
+  margin-top: 7%;
+  min-width: 9%;
+  min-height: 8%;
+  font-weight: 700;
 }
 
 .appt-list {
@@ -201,6 +217,9 @@ nav a.active {
   margin-left: 10px;
 }
 
+.form input {
+  margin-left: 10px;
+}
 .updateForm {
   display: flex;
   flex-direction: column;
