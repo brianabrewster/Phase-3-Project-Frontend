@@ -166,12 +166,12 @@ nav a.active {
 
 .appt-card {
   text-align: center;
-  --background: #c7a285;
+  font-weight: 500;
   --text: black;
   position: relative;
   height: 8rem;
   width: 50%;
-  box-shadow: 2pt 8px rgba(71, 51, 4, 0.05);
+  box-shadow: 2pt 8px rgba(93, 66, 3, 0.05);
 }
 
 .appt-list {
