@@ -45,7 +45,6 @@ function Appointments({ dogs, walkers }) {
 
   return (
     <div>
-      {renderAppointments}
 
       <div className="form">
         <h2>Make An Appointment</h2>
@@ -81,6 +80,9 @@ function Appointments({ dogs, walkers }) {
             Create Appointment
           </button>
         </form>
+      </div>
+      <div className="appt-list">
+      {renderAppointments}
       </div>
     </div>
   );
