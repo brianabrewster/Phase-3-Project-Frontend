@@ -136,6 +136,12 @@ nav a.active {
   border: none;
   background-color: #d5aa7f;
   cursor: pointer;
+  margin-left: 50px;
+}
+
+.formInput {
+  height: 25px;
+  width: 300px;
 }
 
 .card {
@@ -188,7 +194,9 @@ nav a.active {
   flex-direction: column;
   justify-content: center;
   max-width: 50%;
-  padding: 25px;
+  padding-left: 140px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   background-color: rgb(159, 118, 29);
   border-radius: 3rem;
   box-shadow: 5pt 6px rgba(74, 55, 12, 0.8);
@@ -197,6 +205,11 @@ nav a.active {
   margin-left: 33%;
   margin-right: 25%;
   box-sizing: border-box;
+}
+
+.appLabel {
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .applicationForm button {
