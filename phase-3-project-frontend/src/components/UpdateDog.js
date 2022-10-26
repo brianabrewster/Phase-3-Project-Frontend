@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const UpdateDog = ({ dog, onUpdateDog, handleCancel }) => {
+const UpdateDog = ({ dog, onUpdateDog, handleCancel, setIsMainInfo }) => {
   const [name, setName] = useState(`${dog.name}`);
   const [image, setImage] = useState(`${dog.image}`);
   const [owner, setOwner] = useState(`${dog.owner}`);
@@ -24,7 +24,8 @@ const UpdateDog = ({ dog, onUpdateDog, handleCancel }) => {
       body: JSON.stringify({ ...newDog, age: parseInt(newDog.age) }),
     })
       .then((r) => r.json())
-      .then((data) => onUpdateDog(data));
+      .then((data) => onUpdateDog(data))
+      .then(setIsMainInfo((isMainInfo) => !isMainInfo));
   }
 
   return (

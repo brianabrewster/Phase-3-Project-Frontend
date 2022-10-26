@@ -168,28 +168,36 @@ nav a.active {
 }
 
 .appt-card {
+  border-style: inset;
   text-align: center;
   font-weight: 500;
   --text: black;
   position: relative;
   height: 8rem;
-  width: 50%;
+  width: 45%;
   box-shadow: 2pt 8px rgba(93, 66, 3, 0.05);
+  padding-bottom: 2%;
+  margin-left: 4%;
 }
 
 .appt-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 1rem;
+  padding: 3rem;
 }
 
 .form {
+  border-style: solid;
   margin-left: 25%;
   text-align: center;
   position: relative;
   height: 8rem;
   width: 50%;
+}
+
+.form label {
+  margin-left: 10px;
 }
 
 .updateForm {
