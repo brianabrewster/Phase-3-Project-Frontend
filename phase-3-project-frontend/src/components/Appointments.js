@@ -31,7 +31,11 @@ function Appointments({ dogs, walkers }) {
   });
 
   function addNewAppointment(newAppointment) {
-    setAppointments([...appointments, newAppointment]);
+    setAppointments(
+      [...appointments, newAppointment].sort(
+        (a, b) => new Date(a.date) - new Date(b.date)
+      )
+    );
   }
 
   function handleSubmit(e) {
@@ -83,7 +87,7 @@ function Appointments({ dogs, walkers }) {
           <input
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            type="text"
+            type="date"
             name="date"
             placeholder="Date"
           />
